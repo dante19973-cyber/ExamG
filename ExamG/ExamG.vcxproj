@@ -108,7 +108,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>SFML_STATIC;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Users\ALEX\source\SFML-3.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -119,7 +119,7 @@
       <AdditionalLibraryDirectories>C:\Users\ALEX\source\SFML-3.1.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>
       </EntryPointSymbol>
-      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;opengl32.lib;freetype.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-system-d.lib;sfml-window-d.lib;sfml-graphics-d.lib;sfml-audio-d.lib;opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
@@ -131,7 +131,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>SFML_STATIC;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp17</LanguageStandard>
       <AdditionalIncludeDirectories>C:\Users\ALEX\source\SFML-3.1.0\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -141,40 +141,44 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\Users\ALEX\source\SFML-3.1.0\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
-      <AdditionalDependencies>sfml-system.lib;sfml-window.lib;sfml-graphics.lib;sfml-audio.lib;opengl32.lib;winmm.lib;gdi32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>sfml-system.lib;sfml-window.lib;sfml-graphics.lib;sfml-audio.lib;opengl32.lib;winmm.lib;gdi32.lib;freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <Manifest>
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Application.cpp" />
-    <ClCompile Include="Board.cpp" />
-    <ClCompile Include="Bot.cpp" />
-    <ClCompile Include="Button.cpp" />
-    <ClCompile Include="Card.cpp" />
-    <ClCompile Include="Deck.cpp" />
-    <ClCompile Include="Game.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="Menu.cpp" />
-    <ClCompile Include="Player.cpp" />
-    <ClCompile Include="ResourceManager.cpp" />
-    <ClCompile Include="SpecialCard.cpp" />
-    <ClCompile Include="Statistics.cpp" />
+    <ClCompile Include="src\Application.cpp" />
+    <ClCompile Include="src\Board.cpp" />
+    <ClCompile Include="src\Bot.cpp" />
+    <ClCompile Include="src\Button.cpp" />
+    <ClCompile Include="src\Card.cpp" />
+    <ClCompile Include="src\Deck.cpp" />
+    <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\Menu.cpp" />
+    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\ResourceManager.cpp" />
+    <ClCompile Include="src\SpecialCard.cpp" />
+    <ClCompile Include="src\Statistics.cpp" />
+    <ClCompile Include="src\UnitCard.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h" />
-    <ClInclude Include="Board.h" />
-    <ClInclude Include="Bot.h" />
-    <ClInclude Include="Button.h" />
-    <ClInclude Include="Card.h" />
-    <ClInclude Include="Deck.h" />
-    <ClInclude Include="Game.h" />
-    <ClInclude Include="Menu.h" />
-    <ClInclude Include="Player.h" />
-    <ClInclude Include="ResourceManager.h" />
-    <ClInclude Include="SpecialCard.h" />
-    <ClInclude Include="Statistics.h" />
+    <ClInclude Include="include\Application.h" />
+    <ClInclude Include="include\Board.h" />
+    <ClInclude Include="include\BoardRow.h" />
+    <ClInclude Include="include\Bot.h" />
+    <ClInclude Include="include\Button.h" />
+    <ClInclude Include="include\Card.h" />
+    <ClInclude Include="include\CardType.h" />
+    <ClInclude Include="include\Deck.h" />
+    <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\Menu.h" />
+    <ClInclude Include="include\Player.h" />
+    <ClInclude Include="include\ResourceManager.h" />
+    <ClInclude Include="include\SpecialCard.h" />
+    <ClInclude Include="include\Statistics.h" />
+    <ClInclude Include="include\UnitCard.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -24,78 +24,90 @@
     <ClCompile Include="main.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Application.cpp">
+    <ClCompile Include="src\UnitCard.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Board.cpp">
+    <ClCompile Include="src\Application.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Bot.cpp">
+    <ClCompile Include="src\Board.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Button.cpp">
+    <ClCompile Include="src\Bot.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Card.cpp">
+    <ClCompile Include="src\Button.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Deck.cpp">
+    <ClCompile Include="src\Card.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Game.cpp">
+    <ClCompile Include="src\Deck.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Menu.cpp">
+    <ClCompile Include="src\Game.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Player.cpp">
+    <ClCompile Include="src\Menu.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="ResourceManager.cpp">
+    <ClCompile Include="src\Player.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="SpecialCard.cpp">
+    <ClCompile Include="src\ResourceManager.cpp">
       <Filter>src</Filter>
     </ClCompile>
-    <ClCompile Include="Statistics.cpp">
+    <ClCompile Include="src\SpecialCard.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Statistics.cpp">
       <Filter>src</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Application.h">
+    <ClInclude Include="include\UnitCard.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Board.h">
+    <ClInclude Include="include\Application.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Bot.h">
+    <ClInclude Include="include\Board.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Button.h">
+    <ClInclude Include="include\BoardRow.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Card.h">
+    <ClInclude Include="include\Bot.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Deck.h">
+    <ClInclude Include="include\Button.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Game.h">
+    <ClInclude Include="include\Card.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Menu.h">
+    <ClInclude Include="include\Deck.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Player.h">
+    <ClInclude Include="include\Game.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="ResourceManager.h">
+    <ClInclude Include="include\Menu.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="SpecialCard.h">
+    <ClInclude Include="include\Player.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="Statistics.h">
+    <ClInclude Include="include\ResourceManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\SpecialCard.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Statistics.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\CardType.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
