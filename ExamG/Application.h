@@ -10,7 +10,7 @@ class Application
 
 	sf::RenderWindow window;
 	ResourceManager resources;
-	Game game;
+	std::unique_ptr<Game> game;
 
 	void ProcessEvents();
 	void Update(sf::Time deltaTime);

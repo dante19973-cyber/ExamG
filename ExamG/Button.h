@@ -6,6 +6,6 @@ class Button
 	//sf::Text text;
 public:
 	Button();
-	bool IsPressed()const;
-	void Draw()const;
+	bool IsPressed(sf::Vector2f mousePos);
+	void Draw(sf::RenderWindow& window);
 };
