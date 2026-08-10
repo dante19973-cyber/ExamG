@@ -1,48 +1,61 @@
 #include "../include/Application.h"
-#include <iostream>
+
+// Створює повноекранне вікно, завантажує всі ресурси й готує гру до старту.
 Application::Application()
 	: window(sf::VideoMode::getDesktopMode(),
 		WINDOW_TITLE,
 		sf::State::Fullscreen)
 {
 	srand(static_cast<unsigned>(time(nullptr)));
-	resources.LoadResources();
-	game = std::make_unique<Game>(resources);
+	this->resources.LoadResources();
+	this->game = std::make_unique<Game>(this->resources);
 }
+
+// Головний ігровий цикл: доки вікно відкрите — обробляємо події,
+// оновлюємо стан і малюємо кадр.
 void Application::Run()
 {
-	while (window.isOpen())
+	while (this->window.isOpen())
 	{
-		ProcessEvents();
-		Update(sf::Time::Zero);
-		Render();
+		this->ProcessEvents();
+		this->Update(sf::Time::Zero);
+		this->Render();
 	}
 }
+
+// Обробляє системні події вікна (закриття, клік мишею) та передає їх у Game.
 void Application::ProcessEvents()
 {
-	while (const auto event = window.pollEvent())
+	if (this->game->ShouldExit())
+		this->window.close();
+
+	while (const auto event = this->window.pollEvent())
 	{
 		if (event->is<sf::Event::Closed>())
-			window.close();
+			this->window.close();
 
 		if (const auto* mouseEvent = event->getIf<sf::Event::MouseButtonPressed>())
 		{
-			auto mousePos = sf::Mouse::getPosition(window);
-			sf::Vector2f worldPos = window.mapPixelToCoords(mousePos);
+			sf::Vector2i mousePos = sf::Mouse::getPosition(this->window);
+			sf::Vector2f worldPos = this->window.mapPixelToCoords(mousePos);
 			if (mouseEvent->button == sf::Mouse::Button::Left)
 			{
-				game->HandleClick(worldPos);
+				this->game->HandleClick(worldPos);
 			}
 		}
 	}
 }
+
 void Application::Update(sf::Time deltaTime)
 {
-	game->Update(deltaTime);
+	this->game->Update(deltaTime);
+	if (this->game->ShouldExit())
+		this->window.close();
 }
+
 void Application::Render()
 {
-	window.clear();
-	game->Draw(window);
-	window.display();
+	this->window.clear();
+	this->game->Draw(this->window);
+	this->window.display();
 }

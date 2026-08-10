@@ -1,25 +1,29 @@
 #pragma once
-#include<string>
-#include"Card.h"
+#include <string>
+#include "Card.h"
 #include "CardType.h"
+
 class Board;
-enum class SpecialType
-{
-	Weather,
-	Decoy,
-	Horn,
-	Scorch
-};
+class ResourceManager;
+
+// Спеціальна карта: погода, ріг, підміна або спалення.
+// На відміну від юніта/героя, вона не має "сирої" сили — її роль
+// полягає в тому, щоб застосувати ефект до дошки через Play().
 class SpecialCard : public Card
 {
-	std::string effect;
-	int bonus;
 	SpecialType type;
-public:
-	SpecialCard(const sf::Font& font, const std::string& name,SpecialType type);
-	void Activate();
-	void Play(Board& board)override;
-	CardType GetType() const override;
-	int GetCurPow(const Board&) const override;
-};
 
+public:
+	SpecialCard(const std::string& name,
+		CardType cardType,
+		SpecialType st,
+		const sf::Font& font,
+		ResourceManager& res,
+		const std::string& artKey);
+	SpecialCard(const sf::Font& font, const std::string& name, SpecialType st);
+
+	void Play(Board& board, BoardRow row) override;
+	CardType GetType() const override;
+	int GetCurPow(const Board& board, BoardRow row) const override;
+	SpecialType GetSpecialType() const override;
+};

@@ -156,6 +156,7 @@
     <ClCompile Include="src\Card.cpp" />
     <ClCompile Include="src\Deck.cpp" />
     <ClCompile Include="src\Game.cpp" />
+    <ClCompile Include="src\Hero.cpp" />
     <ClCompile Include="src\Menu.cpp" />
     <ClCompile Include="src\Player.cpp" />
     <ClCompile Include="src\ResourceManager.cpp" />
@@ -173,11 +174,14 @@
     <ClInclude Include="include\CardType.h" />
     <ClInclude Include="include\Deck.h" />
     <ClInclude Include="include\Game.h" />
+    <ClInclude Include="include\Hero.h" />
+    <ClInclude Include="include\IPersistable.h" />
     <ClInclude Include="include\Menu.h" />
     <ClInclude Include="include\Player.h" />
     <ClInclude Include="include\ResourceManager.h" />
     <ClInclude Include="include\SpecialCard.h" />
     <ClInclude Include="include\Statistics.h" />
+    <ClInclude Include="include\StatTracker.h" />
     <ClInclude Include="include\UnitCard.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

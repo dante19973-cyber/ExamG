@@ -2,10 +2,11 @@
 #include "Game.h"
 #include "ResourceManager.h"
 #include <SFML/Graphics.hpp>
+
+// Точка входу гри: створює вікно, ресурси й головний об'єкт Game,
+// та керує ігровим циклом (події -> оновлення -> малювання).
 class Application
 {
-	static constexpr unsigned WINDOW_WIDTH = 1280;
-	static constexpr unsigned WINDOW_HEIGHT = 720;
 	static constexpr const char* WINDOW_TITLE = "Gwent Clone";
 
 	sf::RenderWindow window;
@@ -15,6 +16,7 @@ class Application
 	void ProcessEvents();
 	void Update(sf::Time deltaTime);
 	void Render();
+
 public:
 	Application();
 	void Run();

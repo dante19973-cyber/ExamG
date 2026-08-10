@@ -60,6 +60,9 @@
     <ClCompile Include="src\SpecialCard.cpp">
       <Filter>src</Filter>
     </ClCompile>
+    <ClCompile Include="src\Hero.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="src\Statistics.cpp">
       <Filter>src</Filter>
     </ClCompile>
@@ -69,9 +72,6 @@
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\Application.h">
-      <Filter>include</Filter>
-    </ClInclude>
-    <ClInclude Include="include\Board.h">
       <Filter>include</Filter>
     </ClInclude>
     <ClInclude Include="include\BoardRow.h">
@@ -104,10 +104,22 @@
     <ClInclude Include="include\SpecialCard.h">
       <Filter>include</Filter>
     </ClInclude>
+    <ClInclude Include="include\CardType.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Hero.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Board.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\IPersistable.h">
+      <Filter>include</Filter>
+    </ClInclude>
     <ClInclude Include="include\Statistics.h">
       <Filter>include</Filter>
     </ClInclude>
-    <ClInclude Include="include\CardType.h">
+    <ClInclude Include="include\StatTracker.h">
       <Filter>include</Filter>
     </ClInclude>
   </ItemGroup>
